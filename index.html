@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Sign Up Form </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">Access</p>
+        <h1>welcome clients!</h1>
+        <p class="lede">sign up form</p>
+      </div>
+      <div class="forms-panel">
+        <div class="panel-header">
+          <p>Fill your data.</p>
+        </div>
+        <form id="signupForm" class="auth-form">
+          <h2>Sign up</h2>
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Your name">
+          <span id="name-error" class="error-message"></span>
+
+          <label for="email">Work email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <span id="email-error" class="error-message"></span>
+
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="Must be 18+">
+          <span id="age-error" class="error-message"></span>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Choose a secure password">
+          <span id="password-error" class="error-message"></span>
+
+          <button type="submit">Create account</button>
+          <span id="signup-success" class="success-message"></span>
+          <span id="signup-error" class="error-message"></span>
+          <p class="alt-link" id="login-link">
+            Already have an account?
+            <a href="#" id="showLoginForm">Log in</a>
+          </p>
+        </form>
+
+        <form id="loginForm" class="auth-form hidden">
+          <h2>Log in</h2>
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com">
+          <span id="login-email-error" class="error-message"></span>
+
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="••••••••">
+          <span id="login-password-error" class="error-message"></span>
+
+          <button type="submit">Enter workspace</button>
+          <span id="login-success" class="success-message"></span>
+          <span id="login-error" class="error-message"></span>
+          <p class="alt-link" id="signup-link">
+            Need a profile?
+            <a href="#" id="showSignupForm">Sign up</a>
+          </p>
+        </form>
+
+        <div id="successMessage" class="success-card hidden">
+          <h3 id="successText"></h3>
+          <p>We saved your session — jump back anytime.</p>
+          <button class="secondary-btn" id="showSignupFormSuccess">Back to forms</button>
+        </div>
+      </div>
+    </div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
